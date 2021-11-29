@@ -9,6 +9,8 @@ Purpose: Program to recreate string class similar to what is found in Python or 
 
 #include <iostream>     /* cout, endl */
 
+#define DEFAULTSIZE 1
+
 class MyString {
 public:
     MyString(); 
@@ -17,6 +19,7 @@ public:
 
 private:
     int length;
+    char *array;
 
 };
 
