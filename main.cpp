@@ -8,7 +8,7 @@ Purpose: Program to recreate string class similar to what is found in Python or 
 
 
 int main(){
-    MyString MyString;
+    MyString MyString("Hello World");
 
 
 

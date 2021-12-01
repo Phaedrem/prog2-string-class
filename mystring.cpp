@@ -16,8 +16,17 @@ MyString::MyString(){
     array[length-1] = '\0';
 }   
 
-MyString::MyString(const char*){
-
+MyString::MyString(const char* text){
+    length = 0;
+    while(text[length] != '\0'){
+        length++;
+    }
+    length++;
+    array = new char[length];
+    for(int i=0; i<length; i++){
+        array[i] = text[i];
+    }
+    array[length-1] = '\0';
 }
 
 MyString::~MyString(){
