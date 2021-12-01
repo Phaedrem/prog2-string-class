@@ -21,12 +21,11 @@ MyString::MyString(const char* text){
     while(text[length] != '\0'){
         length++;
     }
-    length++;
-    array = new char[length];
+    array = new char[length+1];
     for(int i=0; i<length; i++){
         array[i] = text[i];
     }
-    array[length-1] = '\0';
+    array[length] = '\0';
 }
 
 MyString::~MyString(){
