@@ -49,3 +49,7 @@ PRIVATE
 /*********************************
 PUBLIC
 *********************************/
+
+int MyString::getLength(){
+    return length;
+}
