@@ -53,3 +53,11 @@ PUBLIC
 int MyString::getLength(){
     return length;
 }
+
+void MyString::set(){
+
+}
+
+void MyString::set(const char* newText){
+
+}
