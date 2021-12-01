@@ -11,21 +11,13 @@ Purpose: Program to recreate string class similar to what is found in Python or 
 CONSTRUCTORS / DESTRUCTORS
 *********************************/
 MyString::MyString(){
-    length = DEFAULTSIZE;
-    array = new char[length];
-    array[length-1] = '\0';
+    length = -1;
+    set();
 }   
 
 MyString::MyString(const char* text){
-    length = 0;
-    while(text[length] != '\0'){
-        length++;
-    }
-    array = new char[length+1];
-    for(int i=0; i<length; i++){
-        array[i] = text[i];
-    }
-    array[length] = '\0';
+    length = -1;
+    set(text);
 }
 
 MyString::~MyString(){
@@ -55,9 +47,24 @@ int MyString::getLength(){
 }
 
 void MyString::set(){
-
+    if(length >= 0){
+        delete[] array;
+    }
+    length = 0;
+    array = new char[DEFAULTSIZE];
+    array[length] = '\0';
 }
 
 void MyString::set(const char* newText){
-
+    if(length >= 0){
+        delete[] array;
+    }
+    length = 0;
+    while(newText[length] != '\0'){
+        length++;
+    }
+    array = new char[length+1];
+    for(int i=0; i<length; i++){
+        array[i] = newText[i];
+    }
 }
