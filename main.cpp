@@ -8,8 +8,9 @@ Purpose: Program to recreate string class similar to what is found in Python or 
 
 
 int main(){
-    MyString MyString("Hello World");
-
+    cout << "Creating a string of 'Hello World'" << endl;
+    MyString mystring("Hello World");
+    cout << "The length of the string is " << mystring.getLength() << endl;
 
 
 
