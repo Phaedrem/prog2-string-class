@@ -18,7 +18,7 @@ int main(){
     
     
     cout << "Emptying myString1" << endl; 
-    myString1.set();
+    myString1.clear();
     cout << "The length of the tring in myString1 is now " << myString1.getLength() << endl << endl;
 
     cout << "Placing 'Otters Rock Socks' into myString2" << endl;
