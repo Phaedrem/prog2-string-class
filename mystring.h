@@ -17,7 +17,7 @@ public:
     MyString(const char*);
     ~MyString();
     int getLength();
-    void set();
+    void clear();
     void set(const char*);
 
 private:

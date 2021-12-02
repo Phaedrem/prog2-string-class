@@ -12,7 +12,7 @@ CONSTRUCTORS / DESTRUCTORS
 *********************************/
 MyString::MyString(){
     length = -1;
-    set();
+    clear();
 }   
 
 MyString::MyString(const char* text){
@@ -46,7 +46,7 @@ int MyString::getLength(){
     return length;
 }
 
-void MyString::set(){
+void MyString::clear(){
     if(length >= 0){
         delete[] array;
     }
