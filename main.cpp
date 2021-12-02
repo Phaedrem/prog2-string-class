@@ -25,6 +25,7 @@ int main(){
     myString2.set("Otters Rock Socks");
     cout << "The length of the string myString2 is now " << myString2.getLength() << endl << endl;
 
+    cout << "myString1 contains \"" << myString1.getString() << "\""<< endl; 
     cout << "myString2 contains \"" << myString2.getString() << "\""<< endl; 
 
 
