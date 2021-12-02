@@ -19,6 +19,7 @@ public:
     int getLength();
     void clear();
     void set(const char*);
+    const char* getString();
 
 private:
     int length;

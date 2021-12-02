@@ -42,6 +42,10 @@ PRIVATE
 PUBLIC
 *********************************/
 
+const char* MyString::getString(){
+    return array; 
+}
+
 int MyString::getLength(){
     return length;
 }
