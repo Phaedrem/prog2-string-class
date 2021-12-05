@@ -24,6 +24,7 @@ public:
 private:
     int length;
     char *array;
+    void swap(int*, int*);
 
 };
 
