@@ -25,8 +25,6 @@ MyString::~MyString(){
 }
 
 
-
-
 /*********************************
 PRIVATE
 *********************************/
@@ -41,6 +39,14 @@ void MyString::swap(int *number1, int *number2){
 /*********************************
 PUBLIC
 *********************************/
+
+void MyString::upper(bool caseRequest){
+
+}
+
+void MyString::lower(bool caseRequest){
+    
+}
 
 const char* MyString::getString(){
     return array; 

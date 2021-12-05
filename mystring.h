@@ -20,6 +20,8 @@ public:
     void clear();
     void set(const char*);
     const char* getString();
+    void upper(bool);
+    void lower(bool);
 
 private:
     int length;
