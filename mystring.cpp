@@ -57,7 +57,17 @@ void MyString::lower(bool caseRequest){
 }
 
 const char* MyString::reverse(bool replace){
-    return 0; 
+    char *tempArray = new char[length+1];
+    for(int i=(length-1); i>=0; i--){
+        tempArray[(length-1)-i] = array[i];
+    }
+    tempArray[length] = '\0'; 
+    if(replace){
+        delete[] array;
+        array = tempArray;
+    }
+
+    return tempArray; 
 }
 
 const char* MyString::substring(bool replace){

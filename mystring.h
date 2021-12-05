@@ -22,7 +22,7 @@ public:
     const char* getString();
     void upper(bool);
     void lower(bool);
-    const char* reverse(bool);
+    const char* reverse(bool = false);
     const char* substring(bool);
     void cat(const char*); 
     int count(char);
