@@ -40,6 +40,14 @@ void MyString::swap(int *number1, int *number2){
 PUBLIC
 *********************************/
 
+int MyString::count(char requestedChar){
+    return 0; 
+}
+
+void MyString::cat(const char* newText){
+
+}
+
 void MyString::upper(bool caseRequest){
 
 }

@@ -24,6 +24,8 @@ public:
     void lower(bool);
     const char* reverse(bool);
     const char* substring(bool);
+    void cat(const char*); 
+    int count(char);
 
 private:
     int length;
