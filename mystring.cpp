@@ -70,7 +70,8 @@ const char* MyString::reverse(bool replace){
     return tempArray; 
 }
 
-const char* MyString::substring(bool replace){
+const char* MyString::substring(int sub1, int sub2, bool replace){
+    
     return 0; 
 }
 

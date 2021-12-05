@@ -23,7 +23,7 @@ public:
     void upper(bool);
     void lower(bool);
     const char* reverse(bool = false);
-    const char* substring(bool);
+    const char* substring(int, int, bool = false);
     void cat(const char*); 
     int count(char);
 
