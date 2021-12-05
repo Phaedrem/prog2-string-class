@@ -26,7 +26,27 @@ int main(){
     cout << "The length of the string myString2 is now " << myString2.getLength() << endl << endl;
 
     cout << "myString1 contains \"" << myString1.getString() << "\""<< endl; 
-    cout << "myString2 contains \"" << myString2.getString() << "\""<< endl; 
+    cout << "myString2 contains \"" << myString2.getString() << "\""<< endl << endl; 
+
+    cout << "Reversing myString2 WITHOUT saving it " << endl; 
+    cout << myString2.reverse() << endl << endl; 
+
+    cout << "using getString to show that the original array has NOT changed" << endl; 
+    cout << "myString2 contains \"" << myString2.getString() << "\""<< endl << endl; 
+
+    cout << "Reversing myString2 AND saving it " << endl; 
+    cout << myString2.reverse(true) << endl << endl;
+
+    cout << "using getString to show that the original array HAS changed" << endl; 
+    cout << "myString2 contains \"" << myString2.getString() << "\""<< endl << endl; 
+
+    cout << "Reversing myString1 WITHOUT saving it " << endl; 
+    cout << myString1.reverse() << endl << endl; 
+
+    cout << "using getString to show that the original array has NOT changed" << endl; 
+    cout << "myString1 contains \"" << myString1.getString() << "\""<< endl << endl;
+
+
 
 
 return 0;
