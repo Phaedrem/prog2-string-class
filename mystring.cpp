@@ -48,6 +48,15 @@ void MyString::lower(bool caseRequest){
     
 }
 
+const char* MyString::reverse(bool replace){
+    return 0; 
+}
+
+const char* MyString::substring(bool replace){
+    return 0; 
+}
+
+
 const char* MyString::getString(){
     return array; 
 }

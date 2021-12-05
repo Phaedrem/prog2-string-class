@@ -22,6 +22,8 @@ public:
     const char* getString();
     void upper(bool);
     void lower(bool);
+    const char* reverse(bool);
+    const char* substring(bool);
 
 private:
     int length;
