@@ -71,8 +71,31 @@ const char* MyString::reverse(bool replace){
 }
 
 const char* MyString::substring(int sub1, int sub2, bool replace){
-    
-    return 0; 
+    if((sub1 >= 0 && sub1 <= length) && (sub2 >= 0 && sub2 <= length)){
+        int i = sub1;
+        int k = 0;
+        if(sub1 > sub2){
+            swap(&sub1, &sub2);
+        }
+        while(i <= sub2){
+            i++;
+        }
+        char *tempArray = new char[i+1];
+        while((sub1 <= sub2) && k<i){
+            tempArray[k] = array[sub1];
+            k++; 
+            sub1++;
+        }
+        tempArray[i] = '\0';
+        if(replace){
+            delete[] array;
+            array = tempArray; 
+            length = i; 
+        }
+        return tempArray;
+    } else{
+        throw 0; 
+    }
 }
 
 
@@ -102,7 +125,7 @@ void MyString::set(const char* newText){
         length++;
     }
     array = new char[length+1];
-    for(int i=0; i<length; i++){
+    for(int i=0; i<=length; i++){
         array[i] = newText[i];
     }
 }
