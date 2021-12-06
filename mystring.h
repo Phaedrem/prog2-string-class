@@ -20,8 +20,8 @@ public:
     void clear();
     void set(const char*);
     const char* getString();
-    void upper(bool);
-    void lower(bool);
+    void upper(bool = true);
+    void lower(bool = true);
     const char* reverse(bool = false);
     const char* substring(int, int, bool = false);
     void cat(const char*); 
