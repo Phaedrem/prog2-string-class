@@ -164,5 +164,32 @@ int main(){
     cout << "myString1 contains \"" << myString1.getString() << "\""<< endl; 
     cout << "myString2 contains \"" << myString2.getString() << "\""<< endl << endl; 
 
+    cout << "~~~~~~~~~~~~~~ Cat ~~~~~~~~~~~~~~" << endl << endl; 
+
+    cout << "Using Cat to add \" Paper\" to myString2" << endl;
+    myString2.cat(" Paper");
+    cout << "myString2 contains \"" << myString2.getString() << "\""<< endl; 
+    cout << "The length of the string is " << myString2.getLength() << endl << endl;
+
+    cout << "Using Cat to add \" Paper\" to myString1" << endl;
+    myString1.cat(" Paper");
+    cout << "myString1 contains \"" << myString1.getString() << "\""<< endl; 
+    cout << "The length of the string is " << myString1.getLength() << endl << endl;
+
+    cout << "Using Cat to add \"123\" to myString2" << endl;
+    myString2.cat("123");
+    cout << "myString2 contains \"" << myString2.getString() << "\""<< endl; 
+    cout << "The length of the string is " << myString2.getLength() << endl << endl;
+
+    cout << "Using Cat to add \"!\" to myString1" << endl;
+    myString1.cat("!");
+    cout << "myString1 contains \"" << myString1.getString() << "\""<< endl; 
+    cout << "The length of the string is " << myString1.getLength() << endl << endl;
+
+    cout << "Using Cat to add \"!\" to myString2" << endl;
+    myString2.cat("!");
+    cout << "myString2 contains \"" << myString2.getString() << "\""<< endl; 
+    cout << "The length of the string is " << myString2.getLength() << endl << endl;
+
 return 0;
 }
