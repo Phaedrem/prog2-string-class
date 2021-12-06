@@ -45,7 +45,23 @@ int MyString::count(char requestedChar){
 }
 
 void MyString::cat(const char* newText){
-
+    int i = 0;
+    int k = 0;
+    while(newText[i] != '\0'){
+        i++;
+    }
+    int newLength = (length+i);
+    char *tempArray = new char[newLength+1];
+    for(int i=0; i<length; i++){
+        tempArray[i] = array[i];
+    }
+    for(int i=length; i<= newLength; i++){
+        tempArray[i] = newText[k];
+        k++;
+    }
+    delete[] array;
+    array = tempArray;
+    length = newLength;
 }
 
 void MyString::upper(bool caseRequest){
