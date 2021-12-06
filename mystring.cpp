@@ -41,7 +41,13 @@ PUBLIC
 *********************************/
 
 int MyString::count(char requestedChar){
-    return 0; 
+    int charCount = 0; 
+    for(int i=0; i<length; i++){
+        if(array[i] == requestedChar){
+            charCount++;
+        }
+    }
+    return charCount; 
 }
 
 void MyString::cat(const char* newText){
