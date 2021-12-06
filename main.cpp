@@ -61,8 +61,10 @@ int main(){
     cout << "Testing myString2.substringe - just one letter, both IN range, smaller number first, not saving changes" << endl;
     try{
         cout << myString2.substring(0,0) << endl;    
-    } catch(...){
+    } catch(int a){
         cout << "Error, requested index[s] out of range" << endl;
+    } catch(...){
+        cout << "Error, string is empty" << endl; 
     }
 
     cout << "Using getString to show that the original array has NOT changed" << endl; 
@@ -71,8 +73,10 @@ int main(){
     cout << "Testing myString2.substringe - 3 letters, IN range, smaller number first, not saving changes" << endl;
     try{
         cout << myString2.substring(1,3) << endl;    
-    } catch(...){
+    } catch(int a){
         cout << "Error, requested index[s] out of range" << endl;
+    } catch(...){
+        cout << "Error, string is empty" << endl; 
     }
 
     cout << "Using getString to show that the original array has NOT changed" << endl; 
@@ -81,8 +85,10 @@ int main(){
     cout << "Testing myString2.substringe - 3 letters, IN range, larger number first, not saving changes" << endl;
     try{
         cout << myString2.substring(3,1) << endl;    
-    } catch(...){
+    } catch(int a){
         cout << "Error, requested index[s] out of range" << endl;
+    } catch(...){
+        cout << "Error, string is empty" << endl; 
     }
 
     cout << "Using getString to show that the original array has NOT changed" << endl; 
@@ -101,18 +107,62 @@ int main(){
     cout << "myString1 contains \"" << myString1.getString() << "\""<< endl << endl;
 
 
+    cout << "Testing myString2.substringe - 3 letters, IN range, minimum out of range, NOT saving changes" << endl;
+    try{
+        cout << myString2.substring(-1,3) << endl;    
+    } catch(int a){
+        cout << "Error, requested index[s] out of range" << endl;
+    } catch(...){
+        cout << "Error, string is empty" << endl; 
+    }
+
+    cout << "Using getString to show that the original array has NOT changed" << endl; 
+    cout << "myString2 contains \"" << myString2.getString() << "\""<< endl << endl;
+
+    cout << "Testing myString2.substringe - 3 letters, IN range, maximum out of range, NOT saving changes" << endl;
+    try{
+        cout << myString2.substring(0,12) << endl;    
+    } catch(int a){
+        cout << "Error, requested index[s] out of range" << endl;
+    } catch(...){
+        cout << "Error, string is empty" << endl; 
+    }
+
+    cout << "Using getString to show that the original array has NOT changed" << endl; 
+    cout << "myString2 contains \"" << myString2.getString() << "\""<< endl << endl;
+
     cout << "Testing myString2.substringe - 3 letters, IN range, larger number first, SAVING changes" << endl;
     try{
         cout << myString2.substring(3,1,true) << endl;    
-    } catch(...){
+    } catch(int a){
         cout << "Error, requested index[s] out of range" << endl;
+    } catch(...){
+        cout << "Error, string is empty" << endl; 
     }
 
     cout << "Using getString to show that the original array HAS changed" << endl; 
     cout << "myString2 contains \"" << myString2.getString() << "\""<< endl;
     cout << "The length of the string is " << myString2.getLength() << endl << endl;
 
+    cout << "Testing myString2.substringe - 1 letter, IN range, SAVING changes" << endl;
+    try{
+        cout << myString2.substring(0,0,true) << endl;    
+    } catch(int a){
+        cout << "Error, requested index[s] out of range" << endl;
+    } catch(...){
+        cout << "Error, string is empty" << endl; 
+    }
 
+    cout << "Using getString to show that the original array HAS changed" << endl; 
+    cout << "myString2 contains \"" << myString2.getString() << "\""<< endl;
+    cout << "The length of the string is " << myString2.getLength() << endl << endl;
+
+    cout << "Resetting myString2 to \"Hello World\"" << endl;
+    myString2.set("Hello World");
+    cout << "The length of the string myString2 is now " << myString2.getLength() << endl << endl;
+
+    cout << "myString1 contains \"" << myString1.getString() << "\""<< endl; 
+    cout << "myString2 contains \"" << myString2.getString() << "\""<< endl << endl; 
 
 return 0;
 }
