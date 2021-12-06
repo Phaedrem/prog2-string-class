@@ -71,14 +71,18 @@ const char* MyString::reverse(bool replace){
 }
 
 const char* MyString::substring(int sub1, int sub2, bool replace){
-    if((sub1 >= 0 && sub1 <= length) && (sub2 >= 0 && sub2 <= length)){
-        int i = sub1;
-        int k = 0;
+    if((sub1 >= 0 && sub1 <= length) && (sub2 >= 0 && sub2 <= length) && length > 0){
         if(sub1 > sub2){
             swap(&sub1, &sub2);
         }
-        while(i <= sub2){
-            i++;
+        int i = sub1;
+        int k = 0;
+        if(sub1 == sub2){
+            i = 1;
+        } else{
+            while(i < sub2){
+               i++;
+            }    
         }
         char *tempArray = new char[i+1];
         while((sub1 <= sub2) && k<i){
@@ -93,6 +97,8 @@ const char* MyString::substring(int sub1, int sub2, bool replace){
             length = i; 
         }
         return tempArray;
+    } else if(length <= 0){
+        throw "a"; 
     } else{
         throw 0; 
     }
