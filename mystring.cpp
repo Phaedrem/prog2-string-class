@@ -146,7 +146,7 @@ const char* MyString::substring(int sub1, int sub2, bool replace){
         int i = 0; 
         int newLength = ((sub2-sub1)+1);
         char *tempArray = new char[newLength+1];
-        while((sub1 <= sub2) && i<newLength){
+        while(sub1 <= sub2){
             tempArray[i] = array[sub1];
             i++; 
             sub1++;
