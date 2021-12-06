@@ -244,5 +244,19 @@ int main(){
     myString1.lower(false);
     cout << "myString1 contains \"" << myString1.getString() << "\""<< endl << endl;
 
+    cout << "~~~~~~~~~~~~~~ Count ~~~~~~~~~~~~~~" << endl << endl; 
+
+    cout << "Useing Count to count the number of L's in myString1" << endl;
+    cout << "There are " << myString1.count('L') << " letter L's in mySting1" << endl << endl;
+
+    cout << "Emptying myString1" << endl; 
+    myString1.clear();
+    cout << "The length of the string in myString1 is now " << myString1.getLength() << endl << endl;
+
+    cout << "Useing Count to count the number of L's in myString1" << endl;
+    cout << "There are " << myString1.count('L') << " letter L's in mySting1" << endl << endl; 
+
+
+
 return 0;
 }
