@@ -191,5 +191,58 @@ int main(){
     cout << "myString2 contains \"" << myString2.getString() << "\""<< endl; 
     cout << "The length of the string is " << myString2.getLength() << endl << endl;
 
+    cout << "~~~~~~~~~~~~~~ Upper & Lower ~~~~~~~~~~~~~~" << endl << endl; 
+
+    cout << "myString1 contains \"" << myString1.getString() << "\""<< endl; 
+    cout << "myString2 contains \"" << myString2.getString() << "\""<< endl << endl; 
+
+    cout << "Using Upper to capitalize myString1" << endl;
+    myString1.upper();
+    cout << "myString1 contains \"" << myString1.getString() << "\""<< endl << endl; 
+
+    cout << "Using Upper to capitalize myString2" << endl;
+    myString2.upper();
+    cout << "myString2 contains \"" << myString2.getString() << "\""<< endl << endl; 
+
+    cout << "Using lower to un-capitalize myString2" << endl;
+    myString2.lower();
+    cout << "myString2 contains \"" << myString2.getString() << "\""<< endl << endl; 
+
+    cout << "Using Upper to only capitalize first letter of myString2" << endl;
+    myString2.upper(false);
+    cout << "myString2 contains \"" << myString2.getString() << "\""<< endl << endl;
+
+    cout << "Using lower to un-capitalize myString1" << endl;
+    myString1.lower();
+    cout << "myString1 contains \"" << myString1.getString() << "\""<< endl << endl;
+
+    cout << "Using Upper to only capitalize first letter of myString1" << endl;
+    myString1.upper(false);
+    cout << "myString1 contains \"" << myString1.getString() << "\""<< endl << endl;
+
+    cout << "Resetting myString1 to \"][hello world][\"" << endl;
+    myString1.set("][hello world][");
+    cout << "myString1 contains \"" << myString1.getString() << "\""<< endl << endl;
+
+    cout << "Using Upper to only capitalize first letter of myString1" << endl;
+    myString1.upper(false);
+    cout << "myString1 contains \"" << myString1.getString() << "\""<< endl << endl;
+
+    cout << "Using Upper to capitalize myString2" << endl;
+    myString2.upper();
+    cout << "myString2 contains \"" << myString2.getString() << "\""<< endl << endl; 
+
+    cout << "Using lower to un-capitalize first letter of myString2" << endl;
+    myString2.lower(false);
+    cout << "myString2 contains \"" << myString2.getString() << "\""<< endl << endl;
+
+    cout << "Using Upper to capitalize myString1" << endl;
+    myString1.upper();
+    cout << "myString1 contains \"" << myString1.getString() << "\""<< endl << endl; 
+
+    cout << "Using lower to un-capitalize first letter of myString1" << endl;
+    myString1.lower(false);
+    cout << "myString1 contains \"" << myString1.getString() << "\""<< endl << endl;
+
 return 0;
 }
