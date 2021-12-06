@@ -65,11 +65,57 @@ void MyString::cat(const char* newText){
 }
 
 void MyString::upper(bool caseRequest){
-
+    if(caseRequest){
+        for(int i=0; i<length; i++){
+            if(array[i] >= 'a' && array[i] <= 'z'){
+                array[i] = (array[i]-('a'-'A'));
+            }
+        }
+    } else{
+        for(int i=0; i<length; i++){
+            if(array[i] >= 'A' && array[i] <= 'Z'){
+                array[i] = (array[i]+('a'-'A'));
+            }
+        }
+        if(array[0] >= 'a' && array[0] <= 'z'){
+            array[0] = (array[0]-('a'-'A'));
+        } else{
+            int k = 0;
+            while(((array[k] < 'A' || array[k] > 'Z') && (array[k] < 'a' || array[k] > 'z')) && k<length){
+                if(array[k+1] >= 'a' && array[k+1] <= 'z'){
+                    array[k+1] = (array[k+1]-('a'-'A'));
+                }
+                k++;
+            }
+        }
+    }
 }
 
 void MyString::lower(bool caseRequest){
-    
+    if(caseRequest){
+        for(int i=0; i<length; i++){
+            if(array[i] >= 'A' && array[i] <= 'Z'){
+                array[i] = (array[i]+('a'-'A'));
+            }
+        }
+    } else{
+        for(int i=0; i<length; i++){
+            if(array[i] >= 'a' && array[i] <= 'z'){
+                array[i] = (array[i]-('a'-'A'));
+            }
+        }
+        if(array[0] >= 'A' && array[0] <= 'Z'){
+            array[0] = (array[0]+('a'-'A'));
+        } else{
+            int k = 0;
+            while(((array[k] < 'A' || array[k] > 'Z') && (array[k] < 'a' || array[k] > 'z')) && k<length){
+                if(array[k+1] >= 'A' && array[k+1] <= 'Z'){
+                    array[k+1] = (array[k+1]+('a'-'A'));
+                }
+                k++;
+            }
+        }
+    }
 }
 
 const char* MyString::reverse(bool replace){
