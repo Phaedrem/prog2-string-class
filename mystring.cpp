@@ -151,11 +151,11 @@ const char* MyString::substring(int sub1, int sub2, bool replace){
             i++; 
             sub1++;
         }
-        tempArray[i] = '\0';
+        tempArray[newLength] = '\0';
         if(replace){
             delete[] array;
             array = tempArray; 
-            length = i; 
+            length = newLength; 
         }
         return tempArray;
     } else if(length <= 0){
