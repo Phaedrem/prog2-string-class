@@ -142,14 +142,11 @@ const char* MyString::substring(int sub1, int sub2, bool replace){
     if((sub1 >= 0 && sub1 <= length) && (sub2 >= 0 && sub2 <= length) && length > 0){
         if(sub1 > sub2){
             swap(&sub1, &sub2);
-        }
-        int i = 0; 
+        } 
         int newLength = ((sub2-sub1)+1);
         char *tempArray = new char[newLength+1];
-        while(sub1 <= sub2){
-            tempArray[i] = array[sub1];
-            i++; 
-            sub1++;
+        for(int i=0; i<newLength; i++){
+            tempArray[i] = array[sub1+i];
         }
         tempArray[newLength] = '\0';
         if(replace){
