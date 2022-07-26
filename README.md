@@ -1,2 +1,2 @@
-# empty
-empty repository with only a readme
+# String Class
+Final project - recreate a simplified string class
